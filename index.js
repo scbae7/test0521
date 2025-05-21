@@ -13,6 +13,9 @@ db.connect((err) => {
   }
 });
 
+console.log('DB_HOST:', process.env.DB_HOST);
+console.log('DB_PORT:', process.env.DB_PORT);
+
 // 테스트용 라우터
 app.get('/', (req, res) => {
   db.query('SELECT NOW() as time', (err, result) => {
